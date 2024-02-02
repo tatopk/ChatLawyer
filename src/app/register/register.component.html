@@ -14,7 +14,7 @@
             <div class="form signup">
                 <div class="form-content">
                     <header>Signup</header>
-                    <form action="#">
+                    <form #registerForm="ngForm">
                         <div class="field input-field">
                             <input type="email" placeholder="Email" class="input" ngmodel>
                         </div>
@@ -29,7 +29,7 @@
                         </div>
 
                         <div class="field button-field">
-                            <button>Signup</button>
+                            <button type="submit">Signup</button>
                         </div>
                     </form>
 
