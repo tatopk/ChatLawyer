@@ -3,8 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+import { LoginModule } from './login/login.module';
+import { RegisterModule } from './register/register.module';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ChatComponent } from './components/chat/chat.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
@@ -13,8 +17,12 @@ import { RegisterComponent } from './register/register.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LoginComponent,
-    RegisterComponent
+    HttpClientModule,
+    FormsModule,
+    LoginModule,
+    RegisterModule,
+    ChatComponent,
+    MainComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

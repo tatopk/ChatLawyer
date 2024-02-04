@@ -14,17 +14,17 @@
             <div class="form signup">
                 <div class="form-content">
                     <header>Signup</header>
-                    <form #registerForm="ngForm">
+                    <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm.value)">
                         <div class="field input-field">
-                            <input type="email" placeholder="Email" class="input" ngmodel>
+                            <input type="email" placeholder="Email" class="input" name="email" ngModel>
                         </div>
 
                         <div class="field input-field">
-                            <input type="password" placeholder="Create password" class="password" ngmodel>
+                            <input type="password" placeholder="Create password" name="password" class="password" ngModel>
                         </div>
 
                         <div class="field input-field">
-                            <input type="password" placeholder="Confirm password" class="password" ngmodel>
+                            <input type="password" placeholder="Confirm password" class="password">
                             <i class='bx bx-hide eye-icon'></i>
                         </div>
 

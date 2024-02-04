@@ -27,6 +27,8 @@
     "@angular/cli": "~17.1.0",
     "@angular/compiler-cli": "^17.1.0",
     "@types/jasmine": "~4.3.0",
+    "@types/jquery": "^3.5.29",
+    "@types/mcustomscrollbar": "^2.8.37",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",

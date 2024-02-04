@@ -14,13 +14,13 @@
             <div class="form login">
                 <div class="form-content">
                     <header>Login</header>
-                    <form action="#">
+                    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)">
                         <div class="field input-field">
-                            <input type="email" placeholder="Email" class="input">
+                            <input type="email" placeholder="Email" name="email" class="input" ngModel>
                         </div>
 
                         <div class="field input-field">
-                            <input type="password" placeholder="Password" class="password">
+                            <input type="password" placeholder="Password" name="password" class="password" ngModel>
                             <i class='bx bx-hide eye-icon'></i>
                         </div>
 
@@ -29,7 +29,7 @@
                         </div>
 
                         <div class="field button-field">
-                            <button>Login</button>
+                            <button type="submit">Login</button>
                         </div>
                     </form>
 
