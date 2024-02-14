@@ -1,17 +1,116 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<div class="chat-container">
-  <button class="chat-button" onclick="toggleChat()">💬</button>
-  <div class="chat-box" id="chat">
-    <div class="chat-header">
-      <span class="close-chat" onclick="toggleChat()">&times;</span>
-      <h4>Support Chat</h4>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.css">
+</head>
+<body>
+  <div class="main-section">
+    <div class="head-section">
+      <div class="headLeft-section">
+        <div class="headLeft-sub">
+          <input type="text" name="search" placeholder="Search...">
+          <button aria-label=".">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+      <div class="headRight-section">
+        <div class="headRight-sub">
+          <h3>Ana</h3>
+          <small>Laywer</small>
+        </div>
+      </div>
     </div>
-    <div class="chat-messages" id="chatMessages">
-      <!-- Messages will be displayed here -->
+    <div class="body-section">
+      <div class="left-section mCustomScrollbar" data-mcs-theme="minimal-dark">
+        <ul>
+          <li>
+            <div class="chatList">
+              <div class="img">
+                <i class="fa fa-circle"></i>
+                <img aria-label="." src="assets/Nick.JPG">
+              </div>
+              <div class="desc">
+                <small class="time">05:30 am</small>
+                <h5>Nick</h5><br>
+                <small>Good bye</small>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="chatList">
+              <div class="img">
+                <i class="fa fa-circle"></i>
+                <img aria-label="." src="assets/George.JPG">
+              </div>
+              <div class="desc">
+                <small class="time">3 day</small>
+                <h5>George</h5><br>
+                <small>Thank you</small>
+              </div>
+            </div>
+          </li>
+          <li class="active">
+            <div class="chatList">
+              <div class="img">
+                <img aria-label="." src="assets/Ana.JPG">
+              </div>
+              <div class="desc">
+                <small class="time">4 day</small>
+                <h5>Ana</h5><br>
+                <small>Let's discuss this</small>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="right-section">
+        <div class="message mCustomScrollbar" data-mcs-theme="minimal-dark">
+          <ul>
+            <li class="msg-left">
+              <div class="msg-left-sub">
+                <img aria-label="." src="assets/Ana.JPG">
+                <div class="msg-desc">Blah blah blah</div>
+                <small>05:25 am</small>
+              </div>
+            </li>
+            <li class="msg-right">
+              <div class="msg-left-sub">
+                <img aria-label="." src="assets/Profile.png">
+                <div class="msg-desc">Exactly, even more Blah blah blah</div>
+                <small>05:25 am</small>
+              </div>
+            </li>
+            <li class="msg-day">
+              <small>Wednesday</small>
+            </li>
+            <li class="msg-right">
+              <div class="msg-left-sub">
+                <img aria-label="." src="assets/Profile.png">
+                <div class="msg-desc">Thank you goodbye</div>
+                <small>05:25 am</small>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="right-section-bottom">
+          <form>
+            <div class="upload-btn">
+              <button aria-label="." class="btn">
+                <i class="fa fa-photo"></i>
+              </button>
+              <input aria-label="." type="file" name="myfile" />
+            </div>
+            <input type="text" name="" placeholder="type here...">
+            <button aria-label="." aria-label="." class="btn-send">
+              <i class="fa fa-send"></i>
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
-    <input type="text" id="chatInput" class="chat-input" placeholder="Type your message here..." onkeydown="if (event.keyCode == 13) sendChat()">
-    <button onclick="sendChat()" class="chat-send">Send</button>
   </div>
-</div>
-
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!-- custom scrollbar plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+</body>

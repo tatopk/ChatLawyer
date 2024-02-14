@@ -16,6 +16,9 @@
     background-color: white;
     column-gap: 30px;
 }
+a {
+    cursor: pointer;
+}
 .form{
     position: absolute;
     max-width: 430px;

@@ -9,6 +9,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ChatComponent } from './components/chat/chat.component';
 import { MainComponent } from './main/main.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { BlogModule } from './blog/blog.module';
+import { HeaderModule } from './components/header/header.module';
+import { ContactModule } from './contact/contact.module';
+import { DropdownDirective } from './dropdown.directive';
+import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +28,13 @@ import { MainComponent } from './main/main.component';
     LoginModule,
     RegisterModule,
     ChatComponent,
-    MainComponent
+    MainComponent,
+    FooterComponent,
+    HeaderModule,
+    BlogModule,
+    ContactModule,
+    DropdownDirective,
+    AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]

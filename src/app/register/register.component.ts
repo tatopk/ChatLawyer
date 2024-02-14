@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import {HttpClient} from '@angular/common/http'
+import { FooterComponent } from '../components/footer/footer.component';
+import { HeaderComponent } from '../components/header/header.component';
+import { RouterModule } from '@angular/router';
 
 interface formData{
   name: string;
@@ -13,7 +16,7 @@ interface formData{
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, FooterComponent, HeaderComponent, RouterModule],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })

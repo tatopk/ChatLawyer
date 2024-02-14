@@ -4,12 +4,12 @@ import { HeaderComponent } from '../components/header/header.component';
 import { FooterComponent } from '../components/footer/footer.component';
 
 @Component({
-  selector: 'app-main',
+  selector: 'app-chat-container',
   standalone: true,
   imports: [ChatComponent, HeaderComponent, FooterComponent],
-  templateUrl: './main.component.html',
-  styleUrl: './main.component.css'
+  templateUrl: './chat-container.component.html',
+  styleUrl: './chat-container.component.css'
 })
-export class MainComponent {
+export class ChatContainerComponent {
 
 }
