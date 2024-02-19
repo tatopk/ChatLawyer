@@ -11,6 +11,7 @@ import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
 import { ChatContainerComponent } from './chat-container/chat-container.component';
 import { AdminComponent } from './admin/admin.component';
+import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'chat', component: ChatContainerComponent },
   { path: 'blog', component: BlogComponent},
+  { path: 'blogdetail', component: BlogDetailComponent},
   { path: 'contact', component: ContactComponent},
   { path: 'admin', component: AdminComponent},
 ];

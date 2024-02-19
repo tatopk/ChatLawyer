@@ -15,6 +15,7 @@ import { HeaderModule } from './components/header/header.module';
 import { ContactModule } from './contact/contact.module';
 import { DropdownDirective } from './dropdown.directive';
 import { AdminModule } from './admin/admin.module';
+import { BlogDetailModule } from './blog-detail/blog-detail.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { AdminModule } from './admin/admin.module';
     BlogModule,
     ContactModule,
     DropdownDirective,
-    AdminModule
+    AdminModule,
+    BlogDetailModule
   ],
   providers: [],
   bootstrap: [AppComponent]
