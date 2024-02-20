@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../header/header.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-chat',
   standalone: true,
-  imports: [HeaderComponent, CommonModule],
+  imports: [HeaderComponent, CommonModule, FormsModule],
   templateUrl: './chat.component.html',
   styleUrl: './chat.component.css'
 })
@@ -22,6 +23,8 @@ export class ChatComponent {
     { image: "assets/Profile.png", message: "Exactly, even more Blah blah blah", time: "05:25 am",  sender: "user"  }
   ];
 
+  newMessage: string = '';
+
   constructor() { }
 
   ngOnInit() {
@@ -36,5 +39,20 @@ export class ChatComponent {
     });
 
     item.active = !item.active;
+  }
+
+  sendMessage() {
+    this.messages.push({
+      image: "assets/Profile.png",
+      message: this.newMessage,
+      time: this.getCurrentTime(),
+      sender: "user"
+    });
+
+    this.newMessage = '';
+  }
+
+  getCurrentTime() {
+    return "05:30 am";
   }
 }

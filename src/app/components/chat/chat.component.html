@@ -27,6 +27,8 @@
     <div class="body-section">
       <div class="left-section mCustomScrollbar" data-mcs-theme="minimal-dark">
         <ul>
+
+          <!-- People Switching -->
           <li *ngFor="let chat of chats" [class.active]="chat.active" (click)="toggleActive(chat)">
             <div class="chatList">
                 <div class="img">
@@ -42,6 +44,8 @@
         </ul>
       </div>
       <div class="right-section">
+
+        <!-- Chats Switching -->
         <div class="message mCustomScrollbar" data-mcs-theme="minimal-dark">
           <br>
           <ul>
@@ -54,20 +58,18 @@
             </li>
           </ul>
         </div>
-        <div class="right-section-bottom">
-          <form>
-            <div class="upload-btn">
-              <button aria-label="." class="btn">
-                <i class="fa fa-photo"></i>
-              </button>
-              <input aria-label="." type="file" name="myfile" />
-            </div>
-            <input type="text" name="" placeholder="type here...">
-            <button aria-label="." aria-label="." class="btn-send">
-              <i class="fa fa-send"></i>
-            </button>
-          </form>
-        </div>
+          <div class="right-section-bottom">
+              <div class="upload-btn">
+                <button aria-label="." class="btn">
+                  <i class="fa fa-photo"></i>
+                </button>
+                <input aria-label="." type="file" name="myfile" />
+              </div>
+                <input type="text" placeholder="type here..." [(ngModel)]="newMessage" (keyup.enter)="sendMessage()">
+                <button aria-label="." aria-label="." class="btn-send" (click)="sendMessage()">
+                  <i class="fa fa-send"></i>
+                </button>
+          </div>
       </div>
     </div>
   </div>
