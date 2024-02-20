@@ -9,6 +9,10 @@ body {
 .sus{
   margin-top: -8px;
 }
+
+.sus_foot{
+  margin: 0;
+}
 *,
 *::before,
 *::after {

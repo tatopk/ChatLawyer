@@ -27,71 +27,29 @@
     <div class="body-section">
       <div class="left-section mCustomScrollbar" data-mcs-theme="minimal-dark">
         <ul>
-          <li>
+          <li *ngFor="let chat of chats" [class.active]="chat.active" (click)="toggleActive(chat)">
             <div class="chatList">
-              <div class="img">
-                <i class="fa fa-circle"></i>
-                <img aria-label="." src="assets/Nick.JPG">
-              </div>
-              <div class="desc">
-                <small class="time">05:30 am</small>
-                <h5>Nick</h5><br>
-                <small>Good bye</small>
-              </div>
+                <div class="img">
+                    <img aria-label="." [src]="chat.image">
+                </div>
+                <div class="desc">
+                    <small class="time">{{ chat.time }}</small>
+                    <h5>{{ chat.name }}</h5><br>
+                    <small>{{ chat.message }}</small>
+                </div>
             </div>
-          </li>
-          <li>
-            <div class="chatList">
-              <div class="img">
-                <i class="fa fa-circle"></i>
-                <img aria-label="." src="assets/George.JPG">
-              </div>
-              <div class="desc">
-                <small class="time">3 day</small>
-                <h5>George</h5><br>
-                <small>Thank you</small>
-              </div>
-            </div>
-          </li>
-          <li class="active">
-            <div class="chatList">
-              <div class="img">
-                <img aria-label="." src="assets/Ana.JPG">
-              </div>
-              <div class="desc">
-                <small class="time">4 day</small>
-                <h5>Ana</h5><br>
-                <small>Let's discuss this</small>
-              </div>
-            </div>
-          </li>
+        </li>
         </ul>
       </div>
       <div class="right-section">
         <div class="message mCustomScrollbar" data-mcs-theme="minimal-dark">
+          <br>
           <ul>
-            <li class="msg-left">
-              <div class="msg-left-sub">
-                <img aria-label="." src="assets/Ana.JPG">
-                <div class="msg-desc">Blah blah blah</div>
-                <small>05:25 am</small>
-              </div>
-            </li>
-            <li class="msg-right">
-              <div class="msg-left-sub">
-                <img aria-label="." src="assets/Profile.png">
-                <div class="msg-desc">Exactly, even more Blah blah blah</div>
-                <small>05:25 am</small>
-              </div>
-            </li>
-            <li class="msg-day">
-              <small>Wednesday</small>
-            </li>
-            <li class="msg-right">
-              <div class="msg-left-sub">
-                <img aria-label="." src="assets/Profile.png">
-                <div class="msg-desc">Thank you goodbye</div>
-                <small>05:25 am</small>
+            <li *ngFor="let msg of messages" [ngClass]="{'msg-left': msg.sender === 'other', 'msg-right': msg.sender === 'user'}">
+              <div [ngClass]="{'msg-left-sub': msg.sender === 'other', 'msg-right-sub': msg.sender === 'user'}">
+                <img [src]="msg.image" aria-label=".">
+                <div class="msg-desc">{{ msg.message }}</div>
+                <small>{{ msg.time }}</small>
               </div>
             </li>
           </ul>
