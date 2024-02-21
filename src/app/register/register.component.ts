@@ -4,7 +4,8 @@ import { CommonModule } from '@angular/common';
 import {HttpClient} from '@angular/common/http'
 import { FooterComponent } from '../components/footer/footer.component';
 import { HeaderComponent } from '../components/header/header.component';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 
 interface formData{
   name: string;
@@ -23,7 +24,7 @@ interface formData{
 })
 
 export class RegisterComponent {
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router, private cookieService: CookieService) {
     console.log('Constructor called');
    }
 
@@ -33,6 +34,11 @@ export class RegisterComponent {
     formValue.lastname = "test"
     this.http.post('http://localhost:8000/api/client/register', formValue).subscribe((data) => {
       console.log(data);
+
+      if (data) {
+        // Redirect to '/login' page upon successful registration
+        this.router.navigate(['/login']);
+      }
     });
   }
 }
