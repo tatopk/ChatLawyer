@@ -12,11 +12,12 @@ import { ContactComponent } from './contact/contact.component';
 import { ChatContainerComponent } from './chat-container/chat-container.component';
 import { AdminComponent } from './admin/admin.component';
 import { BlogDetailComponent } from './blog-detail/blog-detail.component';
+import { AuthGuard } from './auth-guard';
 
 const routes: Routes = [
   { path: '', component: MainComponent},
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
+  { path: 'login', component: LoginComponent, canActivate: [AuthGuard]},
+  { path: 'register', component: RegisterComponent, canActivate: [AuthGuard]},
   { path: 'chat', component: ChatContainerComponent },
   { path: 'blog', component: BlogComponent},
   { path: 'blogdetail', component: BlogDetailComponent},
