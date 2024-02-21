@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 
 interface formData{
   name: string;
+  lastname: string;
   email: string;
   password: string;
   phone: string;
@@ -29,7 +30,8 @@ export class RegisterComponent {
   onSubmit(formValue: formData){
     formValue.phone = "000000000"
     formValue.name = "test"
-    this.http.post('http://localhost:8000/api/register', formValue).subscribe((data) => {
+    formValue.lastname = "test"
+    this.http.post('http://localhost:8000/api/client/register', formValue).subscribe((data) => {
       console.log(data);
     });
   }
