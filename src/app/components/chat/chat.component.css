@@ -80,9 +80,6 @@ body{
   color: #fff;
   position: relative;
   }
-  .mCustomScrollBox, .mCSB_container{
-  overflow: unset !important;
-  }
   .left-section ul li.active .desc .time{
   color: #fff;
   }
@@ -224,21 +221,6 @@ body{
   float: right;
   color: #c1c1c1;
   margin-right: 70px;
-  }
-  .message ul li.msg-day{
-  border-top:1px solid #EBEBEB;
-  width: 100%;
-  padding: 0px;
-  margin: 15px 0px;
-  }
-  .message ul li.msg-day small{
-  position: absolute;
-  top: -10px;
-  background: #F6F6F6;
-  color: #c1c1c1;
-  padding: 3px 10px;
-  left: 50%;
-  transform: translateX(-50%);
   }
   .right-section-bottom{
   background: #fff;
